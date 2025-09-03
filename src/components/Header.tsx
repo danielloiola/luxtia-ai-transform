@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -23,9 +24,11 @@ const Header = () => {
             <a href="#manifesto" className="text-foreground hover:text-primary transition-colors">
               Manifesto
             </a>
-            <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg transition-all duration-300">
-              Entre em Contato
-            </Button>
+            <Link to="/contato">
+              <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg transition-all duration-300">
+                Entre em Contato
+              </Button>
+            </Link>
           </nav>
         </div>
       </div>

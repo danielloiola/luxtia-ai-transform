@@ -1,32 +1,38 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, Zap, Building, Shield, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
       icon: <Search className="w-8 h-8 text-primary" />,
       title: "Diagnóstico & Estratégia",
-      description: "Identificamos oportunidades e criamos estratégias baseadas em dados."
+      description: "Identificamos oportunidades e criamos estratégias baseadas em dados.",
+      link: "/servicos/diagnostico-estrategia"
     },
     {
       icon: <Zap className="w-8 h-8 text-primary" />,
       title: "Otimização de Processos",
-      description: "Simplificamos operações para máxima eficiência."
+      description: "Simplificamos operações para máxima eficiência.",
+      link: "/servicos/otimizacao-processos"
     },
     {
       icon: <Building className="w-8 h-8 text-primary" />,
-      title: "Construção de Equipes & Infraestrutura",
-      description: "Desenvolvemos equipes resilientes e sistemas escaláveis."
+      title: "Infraestrutura & Automação",
+      description: "Desenvolvemos equipes resilientes e sistemas escaláveis.",
+      link: "/servicos/infraestrutura-automacao"
     },
     {
       icon: <Shield className="w-8 h-8 text-primary" />,
-      title: "Segurança & Automação",
-      description: "Protegemos seu negócio com soluções seguras e automatizadas."
+      title: "Segurança & Conformidade",
+      description: "Protegemos seu negócio com soluções seguras e automatizadas.",
+      link: "/servicos/seguranca-conformidade"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-primary" />,
       title: "Escalabilidade & Disponibilidade",
-      description: "Garantimos que seus sistemas estejam prontos para o crescimento."
+      description: "Garantimos que seus sistemas estejam prontos para o crescimento.",
+      link: "/servicos/escalabilidade-disponibilidade"
     }
   ];
 
@@ -41,24 +47,28 @@ const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="border-border/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card/80 backdrop-blur-sm group"
-            >
-              <CardHeader className="text-center pb-4">
-                <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-xl font-bold text-foreground">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed text-center">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+            <Link key={index} to={service.link} className="group">
+              <Card className="border-border/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card/80 backdrop-blur-sm h-full cursor-pointer">
+                <CardHeader className="text-center pb-4">
+                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-foreground">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed text-center mb-4">
+                    {service.description}
+                  </p>
+                  <div className="text-center">
+                    <span className="text-primary font-medium group-hover:underline">
+                      Saiba mais →
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
