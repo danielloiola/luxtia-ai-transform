@@ -8,8 +8,8 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/46064a06-2be8-4182-afc1-78e6807c6772.png" 
-              alt="Luxtia Logo" 
-              className="h-8 w-auto"
+              alt="LUXTIA Logo" 
+              className="h-12 w-auto"
             />
           </div>
           

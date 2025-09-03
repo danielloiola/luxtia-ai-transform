@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-tight">
-            Bem-vindo à Luxtia
+            Bem-vindo à LUXTIA
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-semibold text-foreground/80 mb-8">
@@ -19,7 +19,7 @@ const Hero = () => {
           
           <div className="max-w-3xl mx-auto mb-12">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Na Luxtia, acreditamos que a tecnologia é mais do que uma ferramenta — é um catalisador para a transformação. 
+              Na LUXTIA, acreditamos que a tecnologia é mais do que uma ferramenta — é um catalisador para a transformação. 
               Com mais de 20 anos de experiência em transformação digital, liderados por nossa fundadora Tatiana Lucente Campos, 
               entregamos resultados mensuráveis por meio de parcerias estratégicas e tecnologias globais de ponta.
             </p>

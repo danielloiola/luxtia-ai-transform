@@ -17,33 +17,34 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 280 100% 35%;
+    --primary: 312 26% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 20% 95%;
-    --secondary-foreground: 280 100% 25%;
+    --secondary: 312 26% 88%;
+    --secondary-foreground: 309 56% 32%;
 
-    --muted: 280 10% 96%;
-    --muted-foreground: 280 10% 45%;
+    --muted: 8 11% 86%;
+    --muted-foreground: 309 56% 32%;
 
-    --accent: 300 100% 40%;
+    --accent: 309 56% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 280 20% 90%;
-    --input: 280 20% 90%;
-    --ring: 280 100% 35%;
+    --border: 312 26% 88%;
+    --input: 312 26% 88%;
+    --ring: 312 26% 45%;
 
     --radius: 0.75rem;
 
-    /* Custom Luxtia Design Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(280 100% 45%), hsl(320 80% 55%));
-    --gradient-secondary: linear-gradient(180deg, hsl(280 10% 98%), hsl(280 20% 95%));
-    --gradient-hero: linear-gradient(135deg, hsl(280 100% 15%), hsl(320 80% 25%));
-    --shadow-elegant: 0 20px 40px -10px hsl(280 100% 35% / 0.2);
-    --shadow-glow: 0 0 60px hsl(280 100% 45% / 0.3);
+    /* Custom LUXTIA Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(312 26% 45%), hsl(309 56% 32%));
+    --gradient-secondary: linear-gradient(180deg, hsl(312 26% 88%), hsl(8 11% 86%));
+    --gradient-hero: linear-gradient(135deg, hsl(309 56% 32%), hsl(312 26% 45%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 60%), hsl(38 90% 55%));
+    --shadow-elegant: 0 20px 40px -10px hsl(312 26% 45% / 0.2);
+    --shadow-glow: 0 0 60px hsl(312 26% 45% / 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -62,12 +63,13 @@ All colors MUST be HSL.
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Custom Luxtia Design Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(280 100% 45%), hsl(320 80% 55%));
-    --gradient-secondary: linear-gradient(180deg, hsl(280 10% 98%), hsl(280 20% 95%));
-    --gradient-hero: linear-gradient(135deg, hsl(280 100% 15%), hsl(320 80% 25%));
-    --shadow-elegant: 0 20px 40px -10px hsl(280 100% 35% / 0.2);
-    --shadow-glow: 0 0 60px hsl(280 100% 45% / 0.3);
+    /* Custom LUXTIA Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(312 26% 45%), hsl(309 56% 32%));
+    --gradient-secondary: linear-gradient(180deg, hsl(312 26% 88%), hsl(8 11% 86%));
+    --gradient-hero: linear-gradient(135deg, hsl(309 56% 32%), hsl(312 26% 45%));
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 60%), hsl(38 90% 55%));
+    --shadow-elegant: 0 20px 40px -10px hsl(312 26% 45% / 0.2);
+    --shadow-glow: 0 0 60px hsl(312 26% 45% / 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
