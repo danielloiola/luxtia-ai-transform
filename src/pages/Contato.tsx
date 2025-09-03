@@ -90,7 +90,7 @@ const Contato = () => {
             <Card className="border-border/50">
               <CardHeader>
                 <CardTitle className="text-2xl text-foreground">
-                  Solicite uma Consultoria
+                  Agende uma Conversa
                 </CardTitle>
                 <p className="text-muted-foreground">
                   Preencha o formulário abaixo e entraremos em contato em até 24 horas.
