@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const DiagnosticoEstrategia = () => {
   const benefits = [
@@ -137,6 +138,7 @@ const DiagnosticoEstrategia = () => {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
