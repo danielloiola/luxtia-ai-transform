@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="py-12 text-white" style={{background: 'var(--gradient-gold)'}}>
@@ -19,10 +21,46 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Serviços</h4>
             <ul className="space-y-2 text-white/90">
-              <li>Diagnóstico & Estratégia</li>
-              <li>Otimização de Processos</li>
-              <li>Infraestrutura & Automação</li>
-              <li>Segurança & Conformidade</li>
+              <li>
+                <Link 
+                  to="/servicos/diagnostico-estrategia" 
+                  className="hover:text-white transition-colors"
+                >
+                  Diagnóstico & Estratégia
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/servicos/otimizacao-processos" 
+                  className="hover:text-white transition-colors"
+                >
+                  Otimização de Processos
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/servicos/infraestrutura-automacao" 
+                  className="hover:text-white transition-colors"
+                >
+                  Infraestrutura & Automação
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/servicos/seguranca-conformidade" 
+                  className="hover:text-white transition-colors"
+                >
+                  Segurança & Conformidade
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/servicos/escalabilidade-disponibilidade" 
+                  className="hover:text-white transition-colors"
+                >
+                  Escalabilidade & Disponibilidade
+                </Link>
+              </li>
             </ul>
           </div>
           

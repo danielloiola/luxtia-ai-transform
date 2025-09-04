@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Contato = () => {
   const { toast } = useToast();
@@ -268,6 +269,7 @@ const Contato = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
