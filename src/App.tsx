@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contato from "./pages/Contato";
+import IniciarTransformacao from "./pages/IniciarTransformacao";
+import SaibaMais from "./pages/SaibaMais";
 import DiagnosticoEstrategia from "./pages/services/DiagnosticoEstrategia";
 import OtimizacaoProcessos from "./pages/services/OtimizacaoProcessos";
 import InfraestruturaAutomacao from "./pages/services/InfraestruturaAutomacao";
@@ -23,6 +25,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/iniciar-transformacao" element={<IniciarTransformacao />} />
+          <Route path="/saiba-mais" element={<SaibaMais />} />
           <Route path="/servicos/diagnostico-estrategia" element={<DiagnosticoEstrategia />} />
           <Route path="/servicos/otimizacao-processos" element={<OtimizacaoProcessos />} />
           <Route path="/servicos/infraestrutura-automacao" element={<InfraestruturaAutomacao />} />
