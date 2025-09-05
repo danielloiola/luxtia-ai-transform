@@ -16,15 +16,26 @@ const SuccessCases = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="border-border/50 bg-card/80 backdrop-blur-sm shadow-xl">
             <CardContent className="p-6 md:p-8">
-              <div className="aspect-video w-full">
-                <iframe
-                  className="w-full h-full rounded-lg"
-                  src="https://www.youtube.com/embed/clip/Ugkxyc973fygLCm7vL1dpOmnFPbf88arKMSf"
-                  title="Case de Sucesso - Transformação Digital"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
+              <div className="aspect-video w-full relative group cursor-pointer">
+                <a 
+                  href="https://www.youtube.com/clip/Ugkxyc973fygLCm7vL1dpOmnFPbf88arKMSf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  <img
+                    src="/lovable-uploads/6e3c9b2a-619c-43ff-abf4-27d82f96483f.png"
+                    alt="Case de Sucesso - Transformação Digital"
+                    className="w-full h-full object-cover rounded-lg transition-transform group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 rounded-lg flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                    <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-2xl font-bold text-foreground mb-2">
