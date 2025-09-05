@@ -15,13 +15,13 @@ const Header = () => {
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/?scroll=sobre" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/sobre" className="text-foreground hover:text-primary transition-colors">
               Sobre
             </Link>
-            <Link to="/?scroll=servicos" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/servicos" className="text-foreground hover:text-primary transition-colors">
               Serviços
             </Link>
-            <Link to="/?scroll=manifesto" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/manifesto" className="text-foreground hover:text-primary transition-colors">
               Manifesto
             </Link>
             <Link to="/contato">

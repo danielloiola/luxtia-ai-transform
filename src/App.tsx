@@ -8,6 +8,9 @@ import NotFound from "./pages/NotFound";
 import Contato from "./pages/Contato";
 import IniciarTransformacao from "./pages/IniciarTransformacao";
 import SaibaMais from "./pages/SaibaMais";
+import Sobre from "./pages/Sobre";
+import Servicos from "./pages/Servicos";
+import Manifesto from "./pages/Manifesto";
 import DiagnosticoEstrategia from "./pages/services/DiagnosticoEstrategia";
 import OtimizacaoProcessos from "./pages/services/OtimizacaoProcessos";
 import InfraestruturaAutomacao from "./pages/services/InfraestruturaAutomacao";
@@ -24,6 +27,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/iniciar-transformacao" element={<IniciarTransformacao />} />
           <Route path="/saiba-mais" element={<SaibaMais />} />
