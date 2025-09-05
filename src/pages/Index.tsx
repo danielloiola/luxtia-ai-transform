@@ -13,12 +13,17 @@ const Index = () => {
     const scrollTo = urlParams.get('scroll');
     
     if (scrollTo) {
+      // Aumentar o delay para garantir que a página carregou completamente
       setTimeout(() => {
         const element = document.getElementById(scrollTo);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
         }
-      }, 100);
+      }, 500);
     }
   }, []);
 
