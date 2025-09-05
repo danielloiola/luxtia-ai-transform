@@ -48,16 +48,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     <title>Luxtia - Curadoria em Tecnologia & IA</title>
     <meta name="description" content="Luxtia - Curadoria em Tecnologia & Inteligência Artificial. Transformando negócios por meio da inovação com mais de 20 anos de experiência." />
     <meta name="author" content="Luxtia" />
-    <link rel="icon" href="/lovable-uploads/46064a06-2be8-4182-afc1-78e6807c6772.png" type="image/png" />
+    <link rel="icon" href="/lovable-uploads/116758e0-686c-40ab-9e49-8668f5423389.png" type="image/png" />
 
     <meta property="og:title" content="Luxtia - Curadoria em Tecnologia & IA" />
     <meta property="og:description" content="Transformando negócios por meio da inovação com mais de 20 anos de experiência em transformação digital." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/lovable-uploads/46064a06-2be8-4182-afc1-78e6807c6772.png" />
+    <meta property="og:image" content="/lovable-uploads/116758e0-686c-40ab-9e49-8668f5423389.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@luxtia" />
-    <meta name="twitter:image" content="/lovable-uploads/46064a06-2be8-4182-afc1-78e6807c6772.png" />
+    <meta name="twitter:image" content="/lovable-uploads/116758e0-686c-40ab-9e49-8668f5423389.png" />
     
     <!-- This will be replaced with actual built assets -->
     <link rel="stylesheet" href="/assets/index.css">

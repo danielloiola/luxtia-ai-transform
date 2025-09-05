@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="/lovable-uploads/46064a06-2be8-4182-afc1-78e6807c6772.png" 
+                src="/lovable-uploads/116758e0-686c-40ab-9e49-8668f5423389.png" 
                 alt="LUXTIA Logo" 
                 className="h-10 w-auto"
               />
