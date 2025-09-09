@@ -8,14 +8,15 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contato = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    nome: "",
-    telefone: "",
+    name: "",
+    phone: "",
     email: "",
-    mensagem: ""
+    message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -30,7 +31,7 @@ const Contato = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.nome || !formData.email || !formData.telefone) {
+    if (!formData.name || !formData.email || !formData.phone) {
       toast({
         title: "Campos obrigatórios",
         description: "Por favor, preencha todos os campos obrigatórios.",
@@ -42,8 +43,18 @@ const Contato = () => {
     setIsSubmitting(true);
     
     try {
-      // Simular envio (em um ambiente real, você faria uma chamada para API)
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message
+        }
+      });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Mensagem enviada!",
@@ -52,12 +63,13 @@ const Contato = () => {
       
       // Resetar formulário
       setFormData({
-        nome: "",
-        telefone: "",
+        name: "",
+        phone: "",
         email: "",
-        mensagem: ""
+        message: ""
       });
     } catch (error) {
+      console.error('Erro ao enviar email:', error);
       toast({
         title: "Erro ao enviar",
         description: "Tente novamente ou entre em contato diretamente por email.",
@@ -100,12 +112,12 @@ const Contato = () => {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="nome">Nome Completo *</Label>
+                    <Label htmlFor="name">Nome Completo *</Label>
                     <Input
-                      id="nome"
-                      name="nome"
+                      id="name"
+                      name="name"
                       type="text"
-                      value={formData.nome}
+                      value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Seu nome completo"
                       required
@@ -113,12 +125,12 @@ const Contato = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="telefone">Telefone *</Label>
+                    <Label htmlFor="phone">Telefone *</Label>
                     <Input
-                      id="telefone"
-                      name="telefone"
+                      id="phone"
+                      name="phone"
                       type="tel"
-                      value={formData.telefone}
+                      value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="(11) 99999-9999"
                       required
@@ -139,11 +151,11 @@ const Contato = () => {
                   </div>
                   
                   <div>
-                    <Label htmlFor="mensagem">Mensagem (opcional)</Label>
+                    <Label htmlFor="message">Mensagem (opcional)</Label>
                     <Textarea
-                      id="mensagem"
-                      name="mensagem"
-                      value={formData.mensagem}
+                      id="message"
+                      name="message"
+                      value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Conte-nos mais sobre seu projeto ou necessidade..."
                       rows={4}
