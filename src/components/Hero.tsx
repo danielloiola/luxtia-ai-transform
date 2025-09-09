@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="max-w-3xl mx-auto mb-12">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Na LUXTIA, acreditamos que a tecnologia é mais do que uma ferramenta — é um catalisador para a transformação. 
-              Com mais de 20 anos de experiência em transformação digital, liderados por nossa fundadora Tatiana Lucente Campos, 
+              Com mais de 20 anos de experiência em transformação digital, 
               entregamos resultados mensuráveis por meio de parcerias estratégicas e tecnologias globais de ponta.
             </p>
           </div>

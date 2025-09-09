@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="py-12 text-white" style={{background: 'var(--gradient-gold)'}}>
+    <footer className="py-12 text-white bg-slate-900">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
