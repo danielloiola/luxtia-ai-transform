@@ -2,8 +2,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="py-12 text-white bg-slate-900">
-      <div className="container mx-auto px-6">
+    <footer 
+      className="py-12 text-white bg-slate-900 relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/382448f9-2175-46d3-b779-039fe041a584.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-slate-900/80"></div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
