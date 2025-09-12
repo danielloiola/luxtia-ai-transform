@@ -7,7 +7,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center pt-20 relative"
       style={{
         backgroundImage: `url('/lovable-uploads/a5038759-2895-40e9-9e99-e6ff91b63508.png')`,
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
@@ -17,10 +17,10 @@ const Hero = () => {
         <div className="w-full max-w-5xl mx-auto px-6">
           {/* Área que simula estar dentro da tela do laptop */}
           <div 
-            className="text-center relative"
+            className="text-center relative px-4"
             style={{
-              marginTop: '-10%', // Ajusta verticalmente para ficar na tela
-              transform: 'perspective(1000px) rotateX(-2deg)', // Leve perspectiva para combinar com o laptop
+              marginTop: window.innerWidth < 768 ? '0%' : '-10%', // Ajusta verticalmente para ficar na tela
+              transform: window.innerWidth < 768 ? 'none' : 'perspective(1000px) rotateX(-2deg)', // Leve perspectiva para combinar com o laptop
             }}
           >
             <div className="max-w-3xl mx-auto">

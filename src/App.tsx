@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contato from "./pages/Contato";
@@ -20,30 +21,32 @@ import EscalabilidadeDisponibilidade from "./pages/services/EscalabilidadeDispon
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/manifesto" element={<Manifesto />} />
-          <Route path="/contato" element={<Contato />} />
-          <Route path="/iniciar-transformacao" element={<IniciarTransformacao />} />
-          <Route path="/saiba-mais" element={<SaibaMais />} />
-          <Route path="/servicos/diagnostico-estrategia" element={<DiagnosticoEstrategia />} />
-          <Route path="/servicos/otimizacao-processos" element={<OtimizacaoProcessos />} />
-          <Route path="/servicos/infraestrutura-automacao" element={<InfraestruturaAutomacao />} />
-          <Route path="/servicos/seguranca-conformidade" element={<SegurancaConformidade />} />
-          <Route path="/servicos/escalabilidade-disponibilidade" element={<EscalabilidadeDisponibilidade />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/servicos" element={<Servicos />} />
+            <Route path="/manifesto" element={<Manifesto />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/iniciar-transformacao" element={<IniciarTransformacao />} />
+            <Route path="/saiba-mais" element={<SaibaMais />} />
+            <Route path="/servicos/diagnostico-estrategia" element={<DiagnosticoEstrategia />} />
+            <Route path="/servicos/otimizacao-processos" element={<OtimizacaoProcessos />} />
+            <Route path="/servicos/infraestrutura-automacao" element={<InfraestruturaAutomacao />} />
+            <Route path="/servicos/seguranca-conformidade" element={<SegurancaConformidade />} />
+            <Route path="/servicos/escalabilidade-disponibilidade" element={<EscalabilidadeDisponibilidade />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

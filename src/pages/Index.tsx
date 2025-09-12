@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import SuccessCases from "@/components/SuccessCases";
 import Manifesto from "@/components/Manifesto";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -29,6 +30,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Luxtia - Curadoria em Tecnologia & IA | Transformação Digital Estratégica"
+        description="Luxtia é especialista em curadoria tecnológica e inteligência artificial para transformação digital. Mais de 20 anos de experiência em consultoria estratégica, automação de processos e soluções de IA para empresas."
+        keywords="curadoria tecnológica, inteligência artificial, transformação digital, consultoria estratégica, automação de processos, IA empresarial, tecnologia corporativa, inovação digital, otimização de processos, governança tecnológica"
+        canonical="https://luxtia.com.br"
+      />
       <Header />
       <main>
         <Hero />
