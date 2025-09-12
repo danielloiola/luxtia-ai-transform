@@ -1,64 +1,69 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 
 interface SEOHeadProps {
   title: string;
   description: string;
   keywords?: string;
   canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
 }
 
 const SEOHead = ({ 
   title, 
   description, 
   keywords, 
-  canonical, 
-  ogTitle, 
-  ogDescription, 
-  ogImage = "/lovable-uploads/116758e0-686c-40ab-9e49-8668f5423389.png" 
+  canonical
 }: SEOHeadProps) => {
   const fullTitle = title.includes("Luxtia") ? title : `${title} | Luxtia`;
   
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content={ogImage} />
-      
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={ogTitle || fullTitle} />
-      <meta name="twitter:description" content={ogDescription || description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Luxtia",
-          "description": "Curadoria em Tecnologia & Inteligência Artificial",
-          "url": "https://luxtia.com.br",
-          "logo": "https://luxtia.com.br/lovable-uploads/116758e0-686c-40ab-9e49-8668f5423389.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+55-11-99999-9999",
-            "contactType": "customer service",
-            "email": "contato@luxtia.com.br"
-          },
-          "sameAs": [
-            "https://linkedin.com/company/luxtia"
-          ]
-        })}
-      </script>
-    </Helmet>
-  );
+  useEffect(() => {
+    // Update document title
+    document.title = fullTitle;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    }
+    
+    // Update meta keywords
+    if (keywords) {
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      metaKeywords.setAttribute('content', keywords);
+    }
+    
+    // Update canonical URL
+    if (canonical) {
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalLink);
+      }
+      canonicalLink.setAttribute('href', canonical);
+    }
+    
+    // Update Open Graph tags
+    const updateMetaProperty = (property: string, content: string) => {
+      let metaTag = document.querySelector(`meta[property="${property}"]`);
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('property', property);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.setAttribute('content', content);
+    };
+    
+    updateMetaProperty('og:title', fullTitle);
+    updateMetaProperty('og:description', description);
+    
+  }, [fullTitle, description, keywords, canonical]);
+
+  return null;
 };
 
 export default SEOHead;
