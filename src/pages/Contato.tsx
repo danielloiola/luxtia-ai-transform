@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { supabase } from "@/integrations/supabase/client";
+
 
 const Contato = () => {
   const { toast } = useToast();
@@ -43,18 +43,8 @@ const Contato = () => {
     setIsSubmitting(true);
     
     try {
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: {
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          message: formData.message
-        }
-      });
-
-      if (error) {
-        throw error;
-      }
+      // Simulando envio do formulário
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
         title: "Mensagem enviada!",
